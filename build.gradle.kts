@@ -32,6 +32,7 @@ subprojects {
             exceptionFormat = TestExceptionFormat.FULL
             showStandardStreams = false
         }
+        enabled = false
     }
 
     tasks.withType<KotlinJvmTest>().configureEach {

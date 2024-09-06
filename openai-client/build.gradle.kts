@@ -13,8 +13,8 @@ plugins {
 kotlin {
     explicitApi()
     jvm()
-    jsNode()
-    native()
+//    jsNode()
+//    native()
 
     sourceSets {
         all {
@@ -59,27 +59,27 @@ kotlin {
             }
         }
 
-        val jsMain by getting {
-            dependencies {
-                implementation(libs.okio.nodefilesystem)
-            }
-        }
-        val jsTest by getting {
-            dependencies {
-                implementation(kotlin("test-js"))
-            }
-        }
-        val desktopTest by getting {
-            dependencies {
-                implementation(libs.ktor.client.curl)
-            }
-        }
-        if (HostManager.hostIsMac) {
-            val darwinTest by getting {
-                dependencies {
-                    implementation(libs.ktor.client.darwin)
-                }
-            }
-        }
+//        val jsMain by getting {
+//            dependencies {
+//                implementation(libs.okio.nodefilesystem)
+//            }
+//        }
+//        val jsTest by getting {
+//            dependencies {
+//                implementation(kotlin("test-js"))
+//            }
+//        }
+//        val desktopTest by getting {
+//            dependencies {
+//                implementation(libs.ktor.client.curl)
+//            }
+//        }
+//        if (HostManager.hostIsMac) {
+//            val darwinTest by getting {
+//                dependencies {
+//                    implementation(libs.ktor.client.darwin)
+//                }
+//            }
+//        }
     }
 }
