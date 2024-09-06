@@ -1,5 +1,5 @@
 rootProject.name = "openai-kotlin"
-includeBuild("build-support")
+//includeBuild("build-support")
 
 include(":openai-core")
 include(":openai-client")

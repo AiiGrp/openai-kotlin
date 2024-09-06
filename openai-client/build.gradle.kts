@@ -7,7 +7,7 @@ plugins {
     id("binary-compatibility-validator")
     id("com.diffplug.spotless")
     id("org.jetbrains.dokka")
-    id("build-support")
+//    id("build-support")
 }
 
 kotlin {
