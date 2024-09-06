@@ -83,3 +83,15 @@ kotlin {
 //        }
     }
 }
+
+publishing {
+    publications {
+        create<MavenPublication>("maven") {
+            groupId = "com.aallam.openai"
+            artifactId = "openai-client"
+            version = "3.8.3"
+
+            from(components["kotlin"])
+        }
+    }
+}
