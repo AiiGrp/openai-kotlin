@@ -26,6 +26,10 @@ subprojects {
         }
     }
 
+    tasks.withType<Sign>() {
+        enabled = false
+    }
+
     tasks.withType<Test> {
         testLogging {
             events(STARTED, PASSED, SKIPPED, FAILED)
