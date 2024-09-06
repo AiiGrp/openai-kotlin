@@ -261,6 +261,44 @@ public data class ImagePart(
 }
 
 /**
+ * Video content part.
+ *
+ * @param videoUrl the video url.
+ */
+@Serializable
+@SerialName("video_url")
+public data class VideoPart(
+    @SerialName("video_url") val videoUrl: VideoURL,
+) : ContentPart {
+
+    /**
+     * Image content part.
+     *
+     * @param url either a URL of the video.
+     * @param detail specifies the detail level of the image.
+     */
+    public constructor(url: String, detail: String? = null) : this(VideoURL(url = url, detail = detail))
+
+    /**
+     * Image content part data.
+     */
+    @Serializable
+    public data class VideoURL(
+
+        /**
+         * Either a URL of the video or the base64 encoded image data.
+         */
+        @SerialName("url") val url: String,
+
+        /**
+         * Specifies the detail level of the image.
+         */
+        @SerialName("detail") val detail: String? = null,
+    )
+}
+
+
+/**
  * The messages to generate chat completions for.
  */
 public fun chatMessage(block: ChatMessageBuilder.() -> Unit): ChatMessage =
