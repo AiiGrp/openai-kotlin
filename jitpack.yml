@@ -1,6 +1,4 @@
 jdk:
   - openjdk17
 install:
-   - echo "Running a custom install command"
-   - cd ./oepnai-client
-   - ./gradlew clean install -xtest
+  - ./gradlew publishToMavenLocal
