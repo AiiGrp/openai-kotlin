@@ -28,7 +28,7 @@ public data class ChatCompletionChunk(
      * The model used.
      */
     @SerialName("model")
-    public val model: ModelId,
+    public val model: ModelId?,
 
     /**
      * A list of generated completions
