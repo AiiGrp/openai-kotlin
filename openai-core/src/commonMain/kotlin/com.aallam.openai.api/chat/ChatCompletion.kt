@@ -24,7 +24,7 @@ public data class ChatCompletion(
     /**
      * The model used.
      */
-    @SerialName("model") public val model: ModelId,
+    @SerialName("model") public val model: ModelId? = null,
 
     /**
      * A list of generated completions
